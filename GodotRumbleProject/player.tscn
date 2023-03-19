@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://ktg78ow3hkxq"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_bliyk"]
+[ext_resource type="Texture2D" uid="uid://p6u2wa1rhnwq" path="res://filler_art/filler_character.png" id="2_qcka1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_buoji"]
+radius = 15.0333
+
+[node name="Player" type="RigidBody2D"]
+position = Vector2(798, 176)
+custom_integrator = true
+script = ExtResource("1_bliyk")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_qcka1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_buoji")
+
+[node name="ClearTimer" type="Timer" parent="."]
+
+[connection signal="timeout" from="ClearTimer" to="." method="_on_clear_timer_timeout"]

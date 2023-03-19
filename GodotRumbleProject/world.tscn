@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://bp21jrnsd6tla"]
+
+[ext_resource type="Script" path="res://map.gd" id="1_u1es2"]
+[ext_resource type="PackedScene" uid="uid://ktg78ow3hkxq" path="res://player.tscn" id="2_dl1qv"]
+[ext_resource type="FontFile" uid="uid://bugwygtaykwni" path="res://fonts/Rockwell.ttc" id="3_3lm61"]
+[ext_resource type="Script" path="res://Label.gd" id="4_xj4i0"]
+
+[node name="World" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -123.0
+offset_top = -82.0
+offset_right = 1495.0
+offset_bottom = 906.0
+color = Color(0, 0, 0, 1)
+
+[node name="Map" type="Node2D" parent="."]
+script = ExtResource("1_u1es2")
+
+[node name="Player" parent="." instance=ExtResource("2_dl1qv")]
+position = Vector2(360, 116)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[node name="Label" type="Label" parent="."]
+offset_left = 698.0
+offset_top = 202.0
+offset_right = 934.0
+offset_bottom = 327.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_3lm61")
+script = ExtResource("4_xj4i0")
+
+[connection signal="timeout" from="Timer" to="Map" method="_on_timer_timeout"]
