@@ -24,7 +24,7 @@ func _ready():
 			i += 1 
 
 func get_tile(pos):
-	pos -= position
+	pos += Vector2(tile_size / 2, tile_size / 2)
 	pos.x = int(pos.x)
 	pos.y = int(pos.y)
 	var x = pos.x - (int(pos.x) % tile_size)
@@ -32,7 +32,7 @@ func get_tile(pos):
 	x = x / tile_size
 	y = y / tile_size
 	if terrain.has(Vector2(x, y)):
-		return terrain[Vector2(x, y)]
+		return terrain[Vector2(x , y )]
 	else:
 		return null
 

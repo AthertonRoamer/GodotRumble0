@@ -38,3 +38,6 @@ func start_effect():
 	
 func end_effect():
 	pass
+	
+func end_effect_of_state(s):
+	pass
