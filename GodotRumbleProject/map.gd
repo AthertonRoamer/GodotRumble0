@@ -2,8 +2,8 @@ extends Node2D
 
 var tile_scene = preload("res://tile.tscn")
 var terrain : Dictionary = {}
-var tile_size = 32
-var map_size = Vector2(6, 6)
+var tile_size = 64
+var map_size = Vector2(10, 10)
 # Called when the node enters the scene tree for the first time.
 
 var i = 0
@@ -24,6 +24,7 @@ func _ready():
 			i += 1 
 
 func get_tile(pos):
+	pos -= position
 	pos += Vector2(tile_size / 2, tile_size / 2)
 	pos.x = int(pos.x)
 	pos.y = int(pos.y)

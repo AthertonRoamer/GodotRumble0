@@ -1,9 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://bp21jrnsd6tla"]
+[gd_scene load_steps=8 format=3 uid="uid://bp21jrnsd6tla"]
 
 [ext_resource type="Script" path="res://map.gd" id="1_u1es2"]
 [ext_resource type="PackedScene" uid="uid://ktg78ow3hkxq" path="res://player.tscn" id="2_dl1qv"]
 [ext_resource type="FontFile" uid="uid://bugwygtaykwni" path="res://fonts/Rockwell.ttc" id="3_3lm61"]
+[ext_resource type="PackedScene" uid="uid://c60vv2wbdejnf" path="res://carrot.tscn" id="3_l1uo0"]
 [ext_resource type="Script" path="res://Label.gd" id="4_xj4i0"]
+[ext_resource type="PackedScene" uid="uid://nybffa4hscij" path="res://wall.tscn" id="5_io1vd"]
+[ext_resource type="Script" path="res://door.gd" id="6_rsn8u"]
 
 [node name="World" type="Node2D"]
 
@@ -15,10 +18,11 @@ offset_bottom = 906.0
 color = Color(0, 0, 0, 1)
 
 [node name="Map" type="Node2D" parent="."]
+position = Vector2(120, 120)
 script = ExtResource("1_u1es2")
 
 [node name="Player" parent="." instance=ExtResource("2_dl1qv")]
-position = Vector2(360, 116)
+position = Vector2(793, 404)
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 2.0
@@ -32,5 +36,42 @@ offset_bottom = 327.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("3_3lm61")
 script = ExtResource("4_xj4i0")
+
+[node name="Wall" parent="." instance=ExtResource("5_io1vd")]
+position = Vector2(408, 83)
+
+[node name="Wall2" parent="." instance=ExtResource("5_io1vd")]
+position = Vector2(408, 733)
+
+[node name="Wall3" parent="." instance=ExtResource("5_io1vd")]
+position = Vector2(733, 792)
+rotation = 1.5708
+
+[node name="Wall4" parent="." instance=ExtResource("5_io1vd")]
+position = Vector2(83, 408)
+rotation = 1.5708
+
+[node name="Wall5" parent="." instance=ExtResource("5_io1vd")]
+position = Vector2(733, 24)
+rotation = 1.5708
+
+[node name="Wall6" parent="." instance=ExtResource("5_io1vd")]
+position = Vector2(1058, 339)
+
+[node name="Wall7" parent="." instance=ExtResource("5_io1vd")]
+position = Vector2(1058, 477)
+
+[node name="Wall8" parent="." instance=ExtResource("5_io1vd")]
+position = Vector2(861, 425)
+rotation = 1.5708
+
+[node name="Door" parent="." instance=ExtResource("5_io1vd")]
+process_mode = 4
+position = Vector2(733, 408)
+rotation = 1.5708
+script = ExtResource("6_rsn8u")
+
+[node name="Carrot" parent="." instance=ExtResource("3_l1uo0")]
+position = Vector2(362, 403)
 
 [connection signal="timeout" from="Timer" to="Map" method="_on_timer_timeout"]
