@@ -19,6 +19,10 @@ config/icon="res://icon.svg"
 
 Data="*res://data.tscn"
 
+[display]
+
+window/size/viewport_height=800
+
 [input]
 
 a={

@@ -5,12 +5,16 @@ var current_tile
 var on_map = false
 var old_state = -1
 
+var start_pos : Vector2
+
 func _ready():
 	Data.player = self
-
+	start_pos = position
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 var i = 0
 func _process(delta):
+	if on_map == true:
+		close_door()
 	i += 1
 	var new_tile = Data.map.get_tile(position)
 	on_map = true
@@ -56,6 +60,12 @@ func die():
 	Data.label.text = "You Have Fallen"
 	$ClearTimer.wait_time = 3 
 	$ClearTimer.start()
+	
+func close_door():
+	Data.door.process_mode = Node.PROCESS_MODE_ALWAYS
+	
+func open_door():
+	Data.door.process_mode = Node.PROCESS_MODE_DISABLED
 
 
 func _on_clear_timer_timeout():
