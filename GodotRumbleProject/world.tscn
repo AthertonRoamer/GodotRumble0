@@ -1,14 +1,17 @@
-[gd_scene load_steps=8 format=3 uid="uid://bp21jrnsd6tla"]
+[gd_scene load_steps=10 format=3 uid="uid://bp21jrnsd6tla"]
 
+[ext_resource type="Script" path="res://world.gd" id="1_0b7ir"]
 [ext_resource type="Script" path="res://map.gd" id="1_u1es2"]
 [ext_resource type="PackedScene" uid="uid://ktg78ow3hkxq" path="res://player.tscn" id="2_dl1qv"]
 [ext_resource type="FontFile" uid="uid://bugwygtaykwni" path="res://fonts/Rockwell.ttc" id="3_3lm61"]
-[ext_resource type="PackedScene" uid="uid://c60vv2wbdejnf" path="res://carrot.tscn" id="3_l1uo0"]
 [ext_resource type="Script" path="res://Label.gd" id="4_xj4i0"]
 [ext_resource type="PackedScene" uid="uid://nybffa4hscij" path="res://wall.tscn" id="5_io1vd"]
 [ext_resource type="Script" path="res://door.gd" id="6_rsn8u"]
+[ext_resource type="Texture2D" uid="uid://dlg1iduyjr40d" path="res://art/Carrot_Hud_Element.png" id="8_87mhp"]
+[ext_resource type="Script" path="res://CarrotCounter.gd" id="9_edcdw"]
 
 [node name="World" type="Node2D"]
+script = ExtResource("1_0b7ir")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_left = -123.0
@@ -29,10 +32,10 @@ wait_time = 2.0
 autostart = true
 
 [node name="Label" type="Label" parent="."]
-offset_left = 698.0
-offset_top = 202.0
-offset_right = 934.0
-offset_bottom = 327.0
+offset_left = 812.0
+offset_top = 149.0
+offset_right = 1048.0
+offset_bottom = 274.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("3_3lm61")
 script = ExtResource("4_xj4i0")
@@ -71,7 +74,30 @@ position = Vector2(733, 408)
 rotation = 1.5708
 script = ExtResource("6_rsn8u")
 
-[node name="Carrot" parent="." instance=ExtResource("3_l1uo0")]
-position = Vector2(362, 403)
+[node name="CarrotSprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(877, 69)
+scale = Vector2(4, 4)
+texture = ExtResource("8_87mhp")
+
+[node name="CarrotCounter" type="Label" parent="."]
+offset_left = 893.0
+offset_top = 64.0
+offset_right = 962.0
+offset_bottom = 128.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_3lm61")
+theme_override_font_sizes/font_size = 32
+script = ExtResource("9_edcdw")
+
+[node name="PushSpace" type="Label" parent="."]
+visible = false
+offset_left = 868.0
+offset_top = 249.0
+offset_right = 1057.0
+offset_bottom = 272.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_3lm61")
+text = "Push SPACE to continue"
 
 [connection signal="timeout" from="Timer" to="Map" method="_on_timer_timeout"]

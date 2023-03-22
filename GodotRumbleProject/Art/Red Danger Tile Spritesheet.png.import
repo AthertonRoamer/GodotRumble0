@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b0g7st0fxwea3"
-path="res://.godot/imported/Red Danger Tile Spritesheet.png-c414f81eb2f6a3471d3eb1e8b5a36dce.ctex"
+path="res://.godot/imported/Red Danger Tile Spritesheet.png-466d7a73dcb6747c7b07e86f7bc78353.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Red Danger Tile Spritesheet.png"
-dest_files=["res://.godot/imported/Red Danger Tile Spritesheet.png-c414f81eb2f6a3471d3eb1e8b5a36dce.ctex"]
+source_file="res://art/Red Danger Tile Spritesheet.png"
+dest_files=["res://.godot/imported/Red Danger Tile Spritesheet.png-466d7a73dcb6747c7b07e86f7bc78353.ctex"]
 
 [params]
 
