@@ -1,5 +1,9 @@
 extends RigidBody2D
 
+@onready var animationPlayer = $AnimationPlayer
+@onready var animationTree = $AnimationTree
+@onready var animationState = animationTree.get("parameters/playback")
+
 var speed = 100
 var current_tile
 var on_map = false
@@ -9,10 +13,23 @@ var carrots = 0
 var start_pos : Vector2
 
 func _ready():
+	animationTree.active = true
 	Data.player = self
 	start_pos = position
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 var i = 0
+
+func move_state(delta):
+	var input_vector = Vector2.ZERO
+	input_vector.x = (Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left"))
+	input_vector.y = (Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up"))
+	input_vector = input_vector.normalized()
+	
+	if input_vector != Vector2.ZERO:
+		animationTree.set("parameters/Idle/blend_position", input_vector)
+		animationTree.set("parameters/Run/blend_position", input_vector)
+		animationState.travel("Run")
+
 func _process(delta):
 	if on_map == true:
 		close_door()

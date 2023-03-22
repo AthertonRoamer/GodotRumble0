@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://2wlsnu4tmpkc"
-path="res://.godot/imported/Carrot_Pickup_SpriteSheet.png-1903b1fbcbcabb7a1ccba18c34073e02.ctex"
+path="res://.godot/imported/Carrot_Pickup_SpriteSheet.png-9bec64489ad15a67596b144f0ed36c9c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Carrot_Pickup_SpriteSheet.png"
-dest_files=["res://.godot/imported/Carrot_Pickup_SpriteSheet.png-1903b1fbcbcabb7a1ccba18c34073e02.ctex"]
+source_file="res://Art/Carrot_Pickup_SpriteSheet.png"
+dest_files=["res://.godot/imported/Carrot_Pickup_SpriteSheet.png-9bec64489ad15a67596b144f0ed36c9c.ctex"]
 
 [params]
 

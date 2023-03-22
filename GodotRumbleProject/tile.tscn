@@ -656,6 +656,7 @@ scale = Vector2(2, 2)
 texture = ExtResource("2_8veq4")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+
 texture_filter = 1
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_336rp")
