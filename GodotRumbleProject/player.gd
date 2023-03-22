@@ -19,16 +19,9 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 var i = 0
 
-func move_state(delta):
-	var input_vector = Vector2.ZERO
-	input_vector.x = (Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left"))
-	input_vector.y = (Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up"))
-	input_vector = input_vector.normalized()
-	
-	if input_vector != Vector2.ZERO:
-		animationTree.set("parameters/Idle/blend_position", input_vector)
-		animationTree.set("parameters/Run/blend_position", input_vector)
-		animationState.travel("Run")
+
+
+
 
 func _process(delta):
 	if on_map == true:
@@ -51,6 +44,16 @@ func _process(delta):
 		current_tile.start_effect()
 		old_state = current_tile.state
 	
+	var input_vector = Vector2.ZERO
+	input_vector.x = (Input.get_action_strength("d") - Input.get_action_strength("a"))
+	input_vector.y = (Input.get_action_strength("s") - Input.get_action_strength("w"))
+	input_vector = input_vector.normalized()
+	
+	if input_vector != Vector2.ZERO:
+		animationTree.set("parameters/Idle/blend_position", input_vector)
+		#animationTree.set("parameters/Run/blend_position", input_vector)
+		animationState.travel("Idle")
+
 func _integrate_forces(s):
 	var lv = Vector2.ZERO
 	

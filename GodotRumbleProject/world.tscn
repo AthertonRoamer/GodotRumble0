@@ -7,7 +7,7 @@
 [ext_resource type="Script" path="res://Label.gd" id="4_xj4i0"]
 [ext_resource type="PackedScene" uid="uid://nybffa4hscij" path="res://wall.tscn" id="5_io1vd"]
 [ext_resource type="Script" path="res://door.gd" id="6_rsn8u"]
-[ext_resource type="Texture2D" uid="uid://dlg1iduyjr40d" path="res://art/Carrot_Hud_Element.png" id="8_87mhp"]
+[ext_resource type="Texture2D" uid="uid://dlg1iduyjr40d" path="res://Art/Carrot_Hud_Element.png" id="8_87mhp"]
 [ext_resource type="Script" path="res://CarrotCounter.gd" id="9_edcdw"]
 
 [node name="World" type="Node2D"]
