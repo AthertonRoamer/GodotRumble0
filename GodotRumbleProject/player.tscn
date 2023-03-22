@@ -6,7 +6,7 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_buoji"]
 radius = 15.0333
 
-[node name="Player" type="RigidBody2D"]
+[node name="Player" type="RigidBody2D" groups=["player"]]
 position = Vector2(798, 176)
 custom_integrator = true
 script = ExtResource("1_bliyk")

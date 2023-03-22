@@ -27,7 +27,8 @@ func set_state(new_state):
 	match last_state:
 		Data.SAFE:
 			animatedSprite.play("Green_Safe_Flashing")
-			
+		_:
+			pass
 	match state:
 		Data.SAFE:
 			animatedSprite.play("Green_Safe_Static")
@@ -35,6 +36,7 @@ func set_state(new_state):
 			animatedSprite.play("Red_Danger_Static")
 		_:
 			pass
+	
 
 func random_state():
 	randomize()
@@ -43,7 +45,7 @@ func random_state():
 
 func start_effect():
 	if state == 1:
-		Data.player.die()
+		Data.player.die("You have tragically perished")
 	
 func end_effect():
 	pass
@@ -53,4 +55,4 @@ func end_effect_of_state(s):
 
 
 func _on_timer_timeout():
-	
+	pass
