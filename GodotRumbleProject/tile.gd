@@ -44,6 +44,7 @@ func new_tile(new_state):
 			animatedSprite.play("Red_Danger_Static")
 		_:
 			pass
+	
 
 func set_state(new_state):
 	timer = $Timer
@@ -61,7 +62,7 @@ func random_state():
 
 func start_effect():
 	if state == 1:
-		Data.player.die()
+		Data.player.die("You have tragically perished")
 	
 func end_effect():
 	pass

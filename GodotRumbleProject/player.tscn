@@ -176,7 +176,9 @@ states/Start/position = Vector2(220, 81)
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id="AnimationNodeStateMachinePlayback_w4whe"]
 
-[node name="Player" type="RigidBody2D"]
+
+[node name="Player" type="RigidBody2D" groups=["player"]]
+
 position = Vector2(798, 176)
 custom_integrator = true
 script = ExtResource("1_bliyk")

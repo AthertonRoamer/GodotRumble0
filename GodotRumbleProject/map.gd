@@ -22,6 +22,7 @@ func _ready():
 			add_child(t)
 			terrain[Vector2(x, y)] = get_child(i)
 			i += 1 
+	set_ran_carrot()
 
 func get_tile(pos):
 	pos -= position
@@ -33,7 +34,7 @@ func get_tile(pos):
 	x = x / tile_size
 	y = y / tile_size
 	if terrain.has(Vector2(x, y)):
-		return terrain[Vector2(x , y )]
+		return terrain[Vector2(x, y)]
 	else:
 		return null
 
@@ -46,6 +47,12 @@ func flush_row(num):
 
 var row_counter : int = 0
 func _on_timer_timeout():
-	flush_row(row_counter)
-	row_counter += 1 
-	row_counter = row_counter % int(map_size.y)
+	if Data.active:
+		flush_row(row_counter)
+		row_counter += 1 
+		row_counter = row_counter % int(map_size.y)
+	
+func set_ran_carrot():
+	var cx = position.x + (randi() % int(map_size.x)) * tile_size
+	var cy = position.y + (randi() % int(map_size.y)) * tile_size
+	get_parent().set_carrot(Vector2(cx, cy))

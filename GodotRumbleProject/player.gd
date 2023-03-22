@@ -8,6 +8,7 @@ var speed = 100
 var current_tile
 var on_map = false
 var old_state = -1
+var carrots = 0
 
 var start_pos : Vector2
 
@@ -70,11 +71,21 @@ func _integrate_forces(s):
 	lv = lv.normalized()
 	lv *= speed
 	
+	if Data.active == false:
+		lv = Vector2.ZERO
 	s.set_linear_velocity(lv)
-
-func die():
+	
+func carrot(car):
+	car.on_gathered()
+	carrots += 1
+	Data.carrot_counter.set_num(carrots)
+	print("carrot!")
+	Data.advance_phase()
+	
+	
+func die(message):
 	print("dead")
-	Data.label.text = "You Have Fallen"
+	Data.label.text = message
 	$ClearTimer.wait_time = 3 
 	$ClearTimer.start()
 	
