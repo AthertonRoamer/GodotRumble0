@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://kg4y6qedh2mx"
-path="res://.godot/imported/Carrot Pickup SpriteSheet.png-00abdd942fc39cb5f5ce852605897074.ctex"
+path="res://.godot/imported/Carrot Pickup SpriteSheet.png-fbcfa2ef864ca5abb4d77c36c5f0b454.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Carrot Pickup SpriteSheet.png"
-dest_files=["res://.godot/imported/Carrot Pickup SpriteSheet.png-00abdd942fc39cb5f5ce852605897074.ctex"]
+source_file="res://Art/Carrot Pickup SpriteSheet.png"
+dest_files=["res://.godot/imported/Carrot Pickup SpriteSheet.png-fbcfa2ef864ca5abb4d77c36c5f0b454.ctex"]
 
 [params]
 

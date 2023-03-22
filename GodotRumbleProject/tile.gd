@@ -47,9 +47,9 @@ func new_tile(new_state):
 	
 
 func set_state(new_state):
-	timer = $Timer
+	#timer = $Timer
 	animatedSprite = $AnimatedSprite2D
-	timer.start(3.25)
+	#timer.start(3.25)
 #	while timer_end != 1:
 #		animation_transiton()
 	new_tile(new_state)
