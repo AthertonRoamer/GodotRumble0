@@ -5,13 +5,14 @@ var hole_image = preload("res://filler_art/filler_hole_tile.png")
 
 @onready var animatedSprite
 
-var tile_change_time
+var timer_end
 
-var animation
+@onready var timer
+
 var texture
 var sprite 
 
-var state = 0
+var state = Data.SAFE
 var map_pos : Vector2
 
 # Called when the node enters the scene tree for the first time.
@@ -19,15 +20,23 @@ func _ready():
 	sprite = get_node("Sprite2D")
 	sprite.texture = texture
 
+func timer_wait():
+	
+	pass
 
-func set_state(new_state):
-	animatedSprite = $AnimatedSprite2D
-	var last_state = state
+#func animation_transiton():
+#	var last_state = state
+#	match last_state:
+#		Data.SAFE:
+#			animatedSprite.play("Green_Safe_Flashing")
+#
+#		Data.DANGER:
+#			animatedSprite.play("Red_Danger_Flashing")
+#		_:
+#			pass
+
+func new_tile(new_state):
 	state = new_state
-	match last_state:
-		Data.SAFE:
-			animatedSprite.play("Green_Safe_Flashing")
-			
 	match state:
 		Data.SAFE:
 			animatedSprite.play("Green_Safe_Static")
@@ -35,6 +44,15 @@ func set_state(new_state):
 			animatedSprite.play("Red_Danger_Static")
 		_:
 			pass
+
+func set_state(new_state):
+	timer = $Timer
+	animatedSprite = $AnimatedSprite2D
+	timer.start(3.25)
+#	while timer_end != 1:
+#		animation_transiton()
+	new_tile(new_state)
+
 
 func random_state():
 	randomize()
@@ -53,4 +71,4 @@ func end_effect_of_state(s):
 
 
 func _on_timer_timeout():
-	
+	timer_end = 1

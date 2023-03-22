@@ -3,9 +3,9 @@
 [ext_resource type="Script" path="res://map.gd" id="1_u1es2"]
 [ext_resource type="PackedScene" uid="uid://ktg78ow3hkxq" path="res://player.tscn" id="2_dl1qv"]
 [ext_resource type="FontFile" uid="uid://bugwygtaykwni" path="res://fonts/Rockwell.ttc" id="3_3lm61"]
-[ext_resource type="PackedScene" uid="uid://c60vv2wbdejnf" path="res://carrot.tscn" id="3_l1uo0"]
+[ext_resource type="PackedScene" path="res://carrot.tscn" id="3_l1uo0"]
 [ext_resource type="Script" path="res://Label.gd" id="4_xj4i0"]
-[ext_resource type="PackedScene" uid="uid://nybffa4hscij" path="res://wall.tscn" id="5_io1vd"]
+[ext_resource type="PackedScene" path="res://wall.tscn" id="5_io1vd"]
 [ext_resource type="Script" path="res://door.gd" id="6_rsn8u"]
 
 [node name="World" type="Node2D"]

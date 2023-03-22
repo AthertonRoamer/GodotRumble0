@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dafbe4mig62qr"
-path="res://.godot/imported/Red_Danger_Tile_Spritesheet.png-74aa03c9f455c3a2366f88aba2fc208b.ctex"
+path="res://.godot/imported/Red_Danger_Tile_Spritesheet.png-ea276ffc28612f8302e55d6beaeead2f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Red_Danger_Tile_Spritesheet.png"
-dest_files=["res://.godot/imported/Red_Danger_Tile_Spritesheet.png-74aa03c9f455c3a2366f88aba2fc208b.ctex"]
+source_file="res://Art/Red_Danger_Tile_Spritesheet.png"
+dest_files=["res://.godot/imported/Red_Danger_Tile_Spritesheet.png-ea276ffc28612f8302e55d6beaeead2f.ctex"]
 
 [params]
 

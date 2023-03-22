@@ -14,9 +14,9 @@ func _ready():
 			var t = tile_scene.instantiate()
 			randomize()
 			if randi() % 2 == 0:
-				t.set_state(0)
+				t.set_state(Data.SAFE)
 			else:
-				t.set_state(1)
+				t.set_state(Data.DANGER)
 			t.position = Vector2(x, y ) * tile_size
 			t.map_pos = Vector2(x, y)
 			add_child(t)

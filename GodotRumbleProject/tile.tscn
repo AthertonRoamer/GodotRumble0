@@ -653,11 +653,10 @@ script = ExtResource("1_81dt2")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 visible = false
 scale = Vector2(2, 2)
-
 texture = ExtResource("2_8veq4")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(1.8, 1.8)
+scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_336rp")
 animation = &"Green_Safe_Static"
 

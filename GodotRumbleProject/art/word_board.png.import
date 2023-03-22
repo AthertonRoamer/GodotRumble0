@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://coc677p1boyov"
-path="res://.godot/imported/word_board.png-96ba0f7f3be8f1063ff03f7d9531d1bd.ctex"
+path="res://.godot/imported/word_board.png-9bd036ff0eedc49810dd7884817cac1a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/word_board.png"
-dest_files=["res://.godot/imported/word_board.png-96ba0f7f3be8f1063ff03f7d9531d1bd.ctex"]
+source_file="res://Art/word_board.png"
+dest_files=["res://.godot/imported/word_board.png-9bd036ff0eedc49810dd7884817cac1a.ctex"]
 
 [params]
 
