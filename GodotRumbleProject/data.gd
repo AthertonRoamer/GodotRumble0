@@ -16,9 +16,9 @@ var active = true
 var space = false
 
 var phase = 0
-var phase_count = 2
+var phase_count = 5
 
-var state_count = 4
+var state_count = 2
 
 func advance_phase():
 	phase += 1 
@@ -28,6 +28,7 @@ func advance_phase():
 		active = false
 		player.die("You have won!!")
 		world.get_node("PushSpace").visible = true
+		phase = 0
 		
 func end():
 	active = true
@@ -36,10 +37,18 @@ func end():
 	player.carrots = 0
 	carrot_counter.set_num(0)
 	player.position = player.start_pos
+	player.set_position(Vector2(793, 404))
 	map.set_ran_carrot()
 	player.open_door()
 	emit_signal("clear_car")
+	get_tree().reload_current_scene()
 	
+	
+func kill():
+	active = false
+	world.get_node("PushSpace").visible = true
+	phase = 0
+	pass
 	
 func restart():
 	pass

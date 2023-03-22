@@ -4,11 +4,8 @@
 [ext_resource type="Script" path="res://map.gd" id="1_u1es2"]
 [ext_resource type="PackedScene" uid="uid://ktg78ow3hkxq" path="res://player.tscn" id="2_dl1qv"]
 [ext_resource type="FontFile" uid="uid://bugwygtaykwni" path="res://fonts/Rockwell.ttc" id="3_3lm61"]
-
-[ext_resource type="PackedScene" path="res://carrot.tscn" id="3_l1uo0"]
-
 [ext_resource type="Script" path="res://Label.gd" id="4_xj4i0"]
-[ext_resource type="PackedScene" path="res://wall.tscn" id="5_io1vd"]
+[ext_resource type="PackedScene" uid="uid://nybffa4hscij" path="res://wall.tscn" id="5_io1vd"]
 [ext_resource type="Script" path="res://door.gd" id="6_rsn8u"]
 [ext_resource type="Texture2D" uid="uid://dlg1iduyjr40d" path="res://art/Carrot_Hud_Element.png" id="8_87mhp"]
 [ext_resource type="Script" path="res://CarrotCounter.gd" id="9_edcdw"]
@@ -31,7 +28,7 @@ script = ExtResource("1_u1es2")
 position = Vector2(793, 404)
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 2.0
+wait_time = 0.5
 autostart = true
 
 [node name="Label" type="Label" parent="."]
