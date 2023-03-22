@@ -50,7 +50,11 @@ func set_state(new_state):
 	#timer = $Timer
 	animatedSprite = $AnimatedSprite2D
 	#timer.start(3.25)
+
+#	while timer_end != #1:
+
 #	while timer_end != 1:
+
 #		animation_transiton()
 	new_tile(new_state)
 
@@ -63,6 +67,7 @@ func random_state():
 func start_effect():
 	if state == 1:
 		Data.player.die("You have tragically perished")
+		Data.kill()
 	
 func end_effect():
 	pass

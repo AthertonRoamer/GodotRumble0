@@ -1,7 +1,7 @@
 [gd_scene load_steps=22 format=3 uid="uid://ktg78ow3hkxq"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_bliyk"]
-[ext_resource type="Texture2D" uid="uid://rb7l4bx6okdp" path="res://Art/Pig_Sprite_Spritesheet.png" id="2_fcx0p"]
+[ext_resource type="Texture2D" uid="uid://rb7l4bx6okdp" path="res://art/Pig_Sprite_Spritesheet.png" id="2_fcx0p"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_buoji"]
 radius = 15.0333
